@@ -1,0 +1,94 @@
+format = """
+$directory\
+$jobs\
+$git_branch\
+$git_commit\
+$fill\
+$python\
+$package\
+$time\
+$line_break\
+$character"""
+
+[fill]
+symbol = " "
+
+[directory]
+style = "bold cyan"
+home_symbol = "😈 "
+read_only = " 🔐"
+disabled = false
+truncation_length = 4
+truncate_to_repo = true
+
+[character]
+success_symbol = "[➤](bright-yellow)"
+error_symbol = "[➤](bright-yellow)"
+vicmd_symbol = "[⟳](green)"
+
+[git_branch]
+symbol = "🌿 "
+format = "[$symbol$branch]($style) "
+style = "bright-black"
+
+[jobs]
+symbol = "❌"
+style = "bold red"
+number_threshold = 1
+format = "[$symbol]($style)"
+
+[python]
+format = ' [${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+style = "green bold"
+symbol = "🐍 "
+pyenv_version_name = false
+
+[git_commit]
+commit_hash_length = 4
+tag_symbol = "🔖 "
+
+[git_state]
+format = '\([$state( $progress_current/$progress_total)]($style)\) '
+style = "bright-black"
+
+[git_metrics]
+disabled = false
+only_nonzero_diffs = "true"
+
+[cmd_duration]
+format = "[$duration]($style)"
+style = "yellow"
+
+[memory_usage]
+symbol = " "
+
+[rust]
+symbol = " "
+
+
+
+[username]
+style_user = 'yellow bold'
+style_root = 'red bold'
+format = '[$user]($style) '
+disabled = false
+show_always = true
+
+
+
+
+[time]
+disabled = false
+style = 'green'
+#format = '⏱  [\[ $time \]]($style) '
+format = '⏱ [ $time ]($style) '
+use_12hr = true
+utc_time_offset = 'local'
+
+
+
+
+
+[package]
+format = 'via [🐳 $version](208 bold) '
+
