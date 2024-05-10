@@ -24,24 +24,23 @@ show() {
   fi
 }
 
+#
+alias act="cat ~/Documents/repos/genpro/disease-context-center/.env_secret | grep GITLAB"
+
 # ssh
-alias sshstage="ssh dcd@voodystage.voody.io"
-alias sshdcd="ssh dcd@dcd.genproresearch.com" 		# ssh ubuntu@dcd.genproresearch.com  ➡ ubuntu user
-alias sshpfdev="ssh dcd@pfizerdev.voody.io"
-alias sshpfstage="ssh dcd@pfizerstage.voody.io"
-alias sshpfepi="ssh dcd@pfizerepi.voody.io"
+alias sshstage="ssh dcd@voodystage.genproresearch.com"
+alias sshdcd="ssh dcd@dcd.genproresearch.com" 			# ssh ubuntu@dcd.genproresearch.com  ➡ ubuntu user
 alias sshsmw="ssh dcd@smw.genproresearch.com"
-alias sshgitlab="ssh ubuntu@gitlabserver.voody.io" 	# gitlab server
-alias sshrunner="ssh ubuntu@52.187.180.150" 		# gitlabrunner(env-update trigger, watch_env, watch_external_services)
-alias sshloki="ssh azureuser@loki.voody.io" 		# table-to-text, loki, grafana, prometheus, sonar
-alias sshauth="ssh ubuntu@pub.genproresearch.com" 	# DSUR authgenie, smart mapping
-alias ssharippa="ssh ubuntu@sortinghat.voody.io"	# Arippa
-alias sshcars="ssh ubuntu@4.224.32.158"			# CARS dev
-alias sshgpu="ssh -p 222 genpro@111.235.68.175"		# GPU
-alias sshrmw="ssh ubuntu@maia.rmw.voody.io"		# RMW
+alias sshgitlab="ssh ubuntu@gitlab.genproresearch.com" 		# gitlab server
+alias sshrunner="ssh ubuntu@52.187.180.150" 			# gitlabrunner(env-update trigger, watch_env, watch_external_services)
+alias sshloki="ssh azureuser@loki.genproresearch.com"		# table-to-text, loki, grafana, prometheus, sonar, elasticsearch
+alias sshauth="ssh ubuntu@pub.genproresearch.com" 		# DSUR authgenie, smart mapping
+alias ssharippa="ssh ubuntu@sortinghat.genproresearch.com"	# Arippa
+alias sshcars="ssh ubuntu@4.224.32.158"				# CARS dev
+alias sshgpu="ssh -p 222 genpro@111.235.68.175"			# GPU
 alias sshllm="ssh ubuntu@20.197.47.232"			# LLM models, table-sum
 alias sshvoody="ssh staticwebsites@104.209.251.55" 	# voody.io website host
-
+alias sshnextcloud="ssh ubuntu@20.197.46.150"		# Next cloud
 
 # Common
 alias viz="vim ~/.zshrc"
